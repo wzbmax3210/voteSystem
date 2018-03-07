@@ -1,0 +1,15 @@
+<meta http-equiv="content-type" content="text/html;charset=utf-8">
+<h1>请投票</h1>
+<table width="500px" border="0">
+    <tr bgcolor="#7fffd4">
+        <th>名称</th><th>描述</th><th>投票数</th><th>投票</th>
+    </tr>
+    <?php foreach($this->items as $item) : ?>
+    <tr align="center">
+        <td><?=$item['name']?></td>
+        <td><?=$item['description']?></td>
+        <td><?=$item['vote_count']?></td>
+        <td><a href="/votesystem/public/vote/vote?itemid=<?=$item['id']?>">点击投票</a></td>
+    </tr>
+    <?php endforeach; ?>
+</table>
